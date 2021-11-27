@@ -1,0 +1,419 @@
+/*
+Anton Wallin 
+2021-03-22
+DT058G, Webbprogrammering
+Projektuppgift
+Ett webbforum för diskussion om främst programmering.
+*/
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans',Helvetica,sans-serif;
+}
+
+#container {
+    position: relative;
+    min-height: 100vh;
+    background-color: #26364e;
+    color: rgb(210, 224, 230);
+}
+
+textarea {
+    resize: none;
+}
+
+/*
+-------------------------------------------------------------
+                    HEADER AND MENU
+-------------------------------------------------------------
+*/
+
+header {
+    width: 100%;
+}
+
+#mainheader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #3f5980;
+    border: 1px black solid;
+    color: rgb(210, 224, 230);
+}
+
+#mainheader h2 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+}
+
+#mainmenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+    
+}
+
+#mainmenu li {
+    display: inline;
+    font-size: 22px;
+    padding: 50px;
+}
+
+a, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #bdc4ff;
+}
+
+/*
+-------------------------------------------------------------
+                        CONTENT
+-------------------------------------------------------------
+*/
+
+
+#content {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+
+    
+}
+
+/*
+-------------------------------------------------------------
+                        FOOTER
+-------------------------------------------------------------
+*/
+
+#mainfooter {
+    width: 99.9%;
+    background-color: #3f5980;
+    border: 1px black solid;
+}
+
+
+/*
+-------------------------------------------------------------
+                        LOGIN
+-------------------------------------------------------------
+*/
+
+#login-page {
+    position: absolute;
+    top: 30%;
+    right: 46%;
+}
+#login-page h2 {
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+/* Inställningar för alla inputs på login siddan 1 */
+#login-page input {
+    width: 150px;
+    height: 20px;
+    
+}
+
+#displayMessageLogin {
+    position: absolute;
+    top: 25%;
+}
+
+/*
+-------------------------------------------------------------
+                    FORUM: Main- & Sub Category
+-------------------------------------------------------------
+*/
+
+#forum-page {
+    width: 1500px;
+    background-color: #26364e;
+    color: rgb(210, 224, 230);
+    border-radius: 10px;
+    overflow-wrap: break-word;
+}
+
+
+#forum-page h2 {
+    text-align: center;
+}
+
+.main-text {
+    font-size: 27px;
+    line-height: 50px;
+}
+
+.sub-text {
+    font-size: 25px;
+    line-height: 60px;
+}
+
+.main-category {
+    width: 1000px;
+    height: 50px;
+    background-color: #26364e;
+    border: solid 4px rgb(38, 75, 124);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+.main-delete {
+    position: relative;
+    width: 25%;
+    bottom: 35px;
+    left: 102%;
+    margin-right: 40px;
+    font-size: 16px;
+    border: 1px solid #CCCCCC;
+    
+}
+
+#subCat-add {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 35%;
+    width: 450px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: #3f5980;
+    color: rgb(210, 224, 230);
+    font-size: 25px;
+    
+}
+
+.sub-category {
+    width: 1000px;
+    min-height: 100px;
+    background-color: #3f5980;
+    border: solid 3px rgb(16, 46, 85);
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.sub-delete {
+    display: inline;
+    float: right;
+    margin-right: 20px;
+}
+
+.sub-line {
+    margin: 20px;
+    border: 1px solid;
+    overflow: hidden;
+    border-color: rgb(16, 46, 85)
+
+}
+
+
+
+#forum-container a, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+#forum-container a:hover {
+    color: #bdc4ff;
+
+}
+
+
+/*
+-------------------------------------------------------------
+                    FORUM: Topic
+-------------------------------------------------------------
+*/
+
+.topic-container {
+    width: 1000px;
+    background-color: #3f5980;
+    border: solid 3px rgb(16, 46, 85);
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.topic-title {
+    margin: 40px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.topic-user {
+    display: inline;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.topic-delete {
+    display: inline;
+    float: right;
+    margin-right: 20px;
+}
+
+
+/*
+-------------------------------------------------------------
+                    CREATE TOPIC & POST
+-------------------------------------------------------------
+*/
+
+#form-input {
+    margin: 0 auto;
+    width: 450px;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #3f5980;
+    color: rgb(210, 224, 230);
+    border: 2px solid black;
+}
+
+#button-input {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 35%;
+    width: 450px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: #3f5980;
+    color: rgb(210, 224, 230);
+    font-size: 25px;
+}
+
+#form-mainCat {
+    margin: 0 auto;
+    width: 450px;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #3f5980;
+    color: rgb(210, 224, 230);
+    border: 2px solid black;
+}
+
+#button-mainCat {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 35%;
+    width: 450px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: #3f5980;
+    color: rgb(210, 224, 230);
+    font-size: 25px;
+}
+
+
+
+/*
+-------------------------------------------------------------
+                    FORUM: Post
+-------------------------------------------------------------
+*/
+
+.post-container {
+    width: 1000px;
+    background-color: #3f5980;
+    border: solid 3px rgb(16, 46, 85);
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.post-title {
+    margin: 20px;
+    margin-top: 30px;
+}
+
+.post-user {
+    display: inline;
+    margin-bottom: 20px;
+    margin-left: 20px;
+   
+}
+
+.post-delete {
+    display: inline;
+    float: right;
+    margin-right: 20px;
+}
+
+.post-date {
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+.post-line {
+    display: block;
+    margin: 20px;
+    border: 1px solid;
+    overflow: hidden;
+    border-color: rgb(16, 46, 85)
+
+}
+
+.post-signature {
+    display: inline;
+    position: relative;
+    left: 20%;
+    text-align: center;
+    font-style: italic;
+
+}
+
+
+
+/*
+-------------------------------------------------------------
+                    PROFILE
+-------------------------------------------------------------
+*/
+
+#profile-page {
+    position: relative;
+    height: 100%;
+    margin-top: 10px;
+    background-color: #3f5980;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#profile-title {
+    border-bottom: 5px solid rgb(16, 46, 85);
+}
+
+#profile-container {
+    width: 500px;
+    background-color: #3f5980;
+}
+
+#profile-container h4 {
+    display: inline-block;
+}
+
+#sig-update {
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: #2c4d7e;
+    color: rgb(210, 224, 230);
+    font-size: 16px;
+}
