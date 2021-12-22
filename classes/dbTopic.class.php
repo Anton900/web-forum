@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 error_reporting(E_ALL);
+include("databaseConfig.php");
 
 // Anton Wallin 
 // 2021-03-22
@@ -10,11 +11,6 @@ error_reporting(E_ALL);
 
 // Klass för hanteringen av topic i databasen
 class dbTopic { 
-
-	public $dbservername = "studentmysql.miun.se";
-    public $dbname = "anwa1114";
-    public $dbusername = "anwa1114";
-    public $dbpassword = "x6e7xcml";
 
     function __construct(){
 
